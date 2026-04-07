@@ -1,11 +1,20 @@
 {
   "bettors": [
-    "Marc",
+    "Ariel",
+    "Assaf",
+    "Cody",
+    "Dave",
+    "Dylan",
     "Jeff",
-    "Jordan",
-    "Jordan (No Penis)",
-    "Stu",
-    "Brian"
+    "Jeremy",
+    "JP",
+    "Mariano",
+    "Mark",
+    "Matt",
+    "Shaun",
+    "Taylor",
+    "Tom",
+    "Aaryn"
   ],
   "bet_types": [
     "Round 1 Winner",
@@ -15,12 +24,200 @@
     "Overall Winner"
   ],
   "picks": {
-    "Marc": {
+    "Ariel": {
       "Round 1 Winner": {
-        "player": "Scottie Scheffler",
-        "odds": "+200",
-        "stake": "10",
-        "to_win": "20.0",
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 2 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 3 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 4 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Overall Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      }
+    },
+    "Assaf": {
+      "Round 1 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 2 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 3 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 4 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Overall Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      }
+    },
+    "Cody": {
+      "Round 1 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 2 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 3 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 4 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Overall Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      }
+    },
+    "Dave": {
+      "Round 1 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 2 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 3 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 4 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Overall Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      }
+    },
+    "Dylan": {
+      "Round 1 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
         "result": "",
         "payout": "",
         "notes": ""
@@ -109,7 +306,7 @@
         "notes": ""
       }
     },
-    "Jordan": {
+    "Jeremy": {
       "Round 1 Winner": {
         "player": "",
         "odds": "",
@@ -156,7 +353,7 @@
         "notes": ""
       }
     },
-    "Jordan (No Penis)": {
+    "JP": {
       "Round 1 Winner": {
         "player": "",
         "odds": "",
@@ -203,7 +400,7 @@
         "notes": ""
       }
     },
-    "Stu": {
+    "Mariano": {
       "Round 1 Winner": {
         "player": "",
         "odds": "",
@@ -250,7 +447,242 @@
         "notes": ""
       }
     },
-    "Brian": {
+    "Mark": {
+      "Round 1 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 2 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 3 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 4 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Overall Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      }
+    },
+    "Matt": {
+      "Round 1 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 2 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 3 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 4 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Overall Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      }
+    },
+    "Shaun": {
+      "Round 1 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 2 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 3 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 4 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Overall Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      }
+    },
+    "Taylor": {
+      "Round 1 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 2 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 3 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 4 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Overall Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      }
+    },
+    "Tom": {
+      "Round 1 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 2 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 3 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Round 4 Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      },
+      "Overall Winner": {
+        "player": "",
+        "odds": "",
+        "stake": "",
+        "to_win": "",
+        "result": "",
+        "payout": "",
+        "notes": ""
+      }
+    },
+    "Aaryn": {
       "Round 1 Winner": {
         "player": "",
         "odds": "",
@@ -298,5 +730,5 @@
       }
     }
   },
-  "last_updated": "2026-04-07 09:27:15"
+  "last_updated": "2026-04-07 10:29:36"
 }
