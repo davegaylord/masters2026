@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Masters 2026 – Live Picks</title>
+  <style>
+    :root {
+      --green: #006747;
+      --green-dark: #004d35;
+      --green-light: #e8f5ef;
+      --gold: #C9A84C;
+      --gold-light: #f9f1e1;
+      --white: #ffffff;
+      --gray-light: #f4f4f4;
+      --gray: #ccc;
+      --text: #222;
+      --win: #1e7e34;
+      --loss: #bd2130;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Georgia', serif; background: var(--gray-light); color: var(--text); min-height: 100vh; }
+
+    header {
+      background: var(--green);
+      color: var(--white);
+      padding: 18px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+    .logo { display: flex; align-items: center; gap: 14px; }
+    .logo .flag { font-size: 2.2rem; }
+    .logo h1 { font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; }
+    .logo p { font-size: 0.85rem; opacity: 0.85; margin-top: 2px; }
+    .badge {
+      background: var(--gold);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: bold;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    main { max-width: 900px; margin: 0 auto; padding: 28px 16px 48px; }
+
+    .last-updated {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #777;
+      margin-bottom: 28px;
+    }
+
+    /* ── Leaderboard ── */
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: var(--green-dark);
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .leaderboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+    .lb-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-left: 4px solid var(--gray);
+      transition: transform 0.15s;
+    }
+    .lb-card:hover { transform: translateY(-2px); }
+    .lb-card.rank-1 { border-left-color: #C9A84C; }
+    .lb-card.rank-2 { border-left-color: #A8A9AD; }
+    .lb-card.rank-3 { border-left-color: #cd7f32; }
+    .lb-card .rank { font-size: 0.75rem; color: #999; margin-bottom: 4px; }
+    .lb-card h3 { font-size: 1rem; color: var(--green-dark); margin-bottom: 10px; }
+    .lb-stats { display: flex; gap: 14px; font-size: 0.82rem; }
+    .lb-stat { text-align: center; }
+    .lb-stat-val { font-size: 1.05rem; font-weight: bold; }
+    .lb-stat-val.pos { color: var(--win); }
+    .lb-stat-val.neg { color: var(--loss); }
+    .lb-stat-val.neutral { color: #555; }
+    .lb-stat-lbl { color: #999; font-size: 0.72rem; margin-top: 1px; }
+
+    /* ── Picks Table ── */
+    .table-wrap { overflow-x: auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+    table { width: 100%; border-collapse: collapse; background: var(--white); font-size: 0.88rem; }
+    thead tr { background: var(--green); color: var(--white); }
+    th { padding: 10px 12px; text-align: left; font-weight: normal; letter-spacing: 0.3px; white-space: nowrap; }
+    td { padding: 9px 12px; border-bottom: 1px solid #eee; vertical-align: middle; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: var(--green-light); }
+    .person-cell { font-weight: bold; color: var(--green-dark); }
+    .no-pick { color: #bbb; font-style: italic; }
+    .badge-win  { background: #d4edda; color: var(--win);  padding: 2px 8px; border-radius: 10px; font-size: 0.78rem; font-weight: bold; }
+    .badge-loss { background: #f8d7da; color: var(--loss); padding: 2px 8px; border-radius: 10px; font-size: 0.78rem; font-weight: bold; }
+    .badge-pending { background: #fff3cd; color: #856404; padding: 2px 8px; border-radius: 10px; font-size: 0.78rem; }
+    .payout.pos { color: var(--win); font-weight: bold; }
+    .payout.neg { color: var(--loss); font-weight: bold; }
+
+    /* ── Loading / Error ── */
+    .msg { text-align: center; padding: 60px 20px; color: #999; font-size: 1rem; }
+
+    @media (max-width: 600px) {
+      header { padding: 14px 16px; }
+      .logo h1 { font-size: 1.2rem; }
+      th, td { padding: 7px 8px; font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span class="flag">⛳</span>
+    <div>
+      <h1>The Masters 2026</h1>
+      <p>Friendly Betting Sheet · Augusta National</p>
+    </div>
+  </div>
+  <span class="badge">👁 Live View</span>
+</header>
+
+<main>
+  <div id="last-updated" class="last-updated"></div>
+  <div id="content"><p class="msg">Loading picks…</p></div>
+</main>
+
+<script>
+async function load() {
+  // file:// — can't use fetch, offer two options
+  if (location.protocol === 'file:') {
+    document.getElementById('content').innerHTML = `
+      <p class="msg">
+        To view picks locally, open a terminal in the <code>masters_bets</code> folder and run:<br><br>
+        <code>python -m http.server 8080</code><br><br>
+        Then open <a href="http://localhost:8080/viewer.html">http://localhost:8080/viewer.html</a>
+      </p>`;
+    return;
+  }
+
+  // localhost — try Flask API first, then fall back to data.json
+  const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+  const urls = isLocal
+    ? ['/api/data', './data.json']
+    : ['./data.json'];
+
+  let lastErr;
+  for (const url of urls) {
+    try {
+      const res = await fetch(url + (url.endsWith('.json') ? '?t=' + Date.now() : ''));
+      if (res.ok) { render(await res.json()); return; }
+    } catch (e) { lastErr = e; }
+  }
+
+  document.getElementById('content').innerHTML =
+    `<p class="msg">⚠️ Could not load picks data.<br><small>${lastErr?.message ?? 'Unknown error'}</small></p>`;
+}
+
+function fmt(val) {
+  const n = parseFloat(val);
+  if (isNaN(n)) return null;
+  return n;
+}
+
+function render(data) {
+  const { bettors, bet_types, picks, last_updated } = data;
+
+  document.getElementById('last-updated').textContent =
+    last_updated ? `Last updated: ${last_updated}` : '';
+
+  // ── Compute stats per bettor ──
+  const stats = bettors.map(b => {
+    let wins = 0, losses = 0, pending = 0, net = 0;
+    let hasPick = false;
+    for (const bt of bet_types) {
+      const p = picks[b]?.[bt] || {};
+      if (!p.player) { pending++; continue; }
+      hasPick = true;
+      if (p.result === 'win') {
+        wins++;
+        net += fmt(p.payout) ?? 0;
+      } else if (p.result === 'loss') {
+        losses++;
+        net -= fmt(p.stake) ?? 0;
+      } else {
+        pending++;
+        // stake is "at risk" — show as negative
+        net -= fmt(p.stake) ?? 0;
+      }
+    }
+    return { name: b, wins, losses, pending, net, hasPick };
+  });
+
+  // Sort: most wins first, then by net
+  const sorted = [...stats].sort((a, b) => b.wins - a.wins || b.net - a.net);
+
+  // ── Leaderboard ──
+  const lbHTML = sorted.map((s, i) => {
+    const netStr = s.net === 0 && !s.hasPick ? '—'
+      : (s.net >= 0 ? '+$' : '-$') + Math.abs(s.net).toFixed(2);
+    const netClass = s.net > 0 ? 'pos' : s.net < 0 ? 'neg' : 'neutral';
+    const rankClass = i < 3 ? `rank-${i+1}` : '';
+    const medal = ['🥇','🥈','🥉'][i] ?? `#${i+1}`;
+    return `
+      <div class="lb-card ${rankClass}">
+        <div class="rank">${medal}</div>
+        <h3>${esc(s.name)}</h3>
+        <div class="lb-stats">
+          <div class="lb-stat"><div class="lb-stat-val pos">${s.wins}</div><div class="lb-stat-lbl">Wins</div></div>
+          <div class="lb-stat"><div class="lb-stat-val neg">${s.losses}</div><div class="lb-stat-lbl">Losses</div></div>
+          <div class="lb-stat"><div class="lb-stat-val neutral">${s.pending}</div><div class="lb-stat-lbl">Pending</div></div>
+          <div class="lb-stat"><div class="lb-stat-val ${netClass}">${netStr}</div><div class="lb-stat-lbl">Net</div></div>
+        </div>
+      </div>`;
+  }).join('');
+
+  // ── Full picks table ──
+  let rows = '';
+  for (const b of bettors) {
+    let firstRow = true;
+    for (const bt of bet_types) {
+      const p = picks[b]?.[bt] || {};
+      const playerCell = p.player
+        ? `<strong>${esc(p.player)}</strong>`
+        : `<span class="no-pick">—</span>`;
+
+      let resultBadge = '<span class="badge-pending">Pending</span>';
+      if (p.result === 'win')  resultBadge = '<span class="badge-win">Win</span>';
+      if (p.result === 'loss') resultBadge = '<span class="badge-loss">Loss</span>';
+      if (!p.player)           resultBadge = '<span class="no-pick">—</span>';
+
+      let payoutCell = '<span class="no-pick">—</span>';
+      if (p.result === 'win' && p.payout) {
+        payoutCell = `<span class="payout pos">+$${parseFloat(p.payout).toFixed(2)}</span>`;
+      } else if (p.result === 'loss' && p.stake) {
+        payoutCell = `<span class="payout neg">-$${parseFloat(p.stake).toFixed(2)}</span>`;
+      }
+
+      rows += `<tr>
+        ${firstRow ? `<td class="person-cell" rowspan="${bet_types.length}">${esc(b)}</td>` : ''}
+        <td>${esc(bt)}</td>
+        <td>${playerCell}</td>
+        <td>${p.odds || '<span class="no-pick">—</span>'}</td>
+        <td>${p.stake ? '$' + p.stake : '<span class="no-pick">—</span>'}</td>
+        <td>${p.to_win ? '$' + parseFloat(p.to_win).toFixed(2) : '<span class="no-pick">—</span>'}</td>
+        <td>${resultBadge}</td>
+        <td>${payoutCell}</td>
+      </tr>`;
+      firstRow = false;
+    }
+  }
+
+  document.getElementById('content').innerHTML = `
+    <div class="section-title">⛳ Leaderboard</div>
+    <div class="leaderboard">${lbHTML}</div>
+
+    <div class="section-title">📋 All Picks</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>Person</th><th>Bet</th><th>Pick</th>
+          <th>Odds</th><th>Stake</th><th>To Win</th>
+          <th>Result</th><th>Payout</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+}
+
+function esc(str) {
+  return String(str)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+load();
+</script>
+</body>
+</html>
